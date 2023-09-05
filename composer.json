@@ -1,0 +1,30 @@
+{
+    "name": "eduardoaraujo01/nova-env",
+    "description": "A Laravel Nova card.",
+    "version": "1.0",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eduardoaraujo01\\NovaEnv\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eduardoaraujo01\\NovaEnv\\CardServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
