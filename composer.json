@@ -1,6 +1,11 @@
 {
     "name": "eduardoaraujo01/nova-env",
     "description": "A Laravel Nova card.",
+    "authors": [{
+        "email": "dev.eduardoaraujo@gmail.com",
+        "name": "Eduardo Araujo",
+        "homepage": "https://github.com/eduardoaraujo01"
+    }],
     "version": "1.0",
     "keywords": [
         "laravel",
