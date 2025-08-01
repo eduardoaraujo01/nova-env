@@ -11,7 +11,7 @@
         </div>
 
         <Modal :show="isModalOpen">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="width: 800px;">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" style="width: 800px;">
                 <div class="p-8">
                     <heading :level="2" class="mb-6">{{ this.__('Editar arquivo de ambiente') }}</heading>
                     <textarea class="w-full h-full form-control form-input form-input-bordered py-3 min-h-textarea"
@@ -54,7 +54,7 @@ export default {
             this.isModalOpen = true
 
             Nova.request()
-                .get(`/nova-vendor/nova-env-card/environment`)
+                .get(`/nova-vendor/nova-env-card/environment?env-name=${this.card.envName}`)
                 .then(response => {
                     this.value = response.data;
                 })
@@ -68,7 +68,7 @@ export default {
             this.isSaving = true
 
             Nova.request()
-                .post(`/nova-vendor/nova-env-card/environment`, {
+                .post(`/nova-vendor/nova-env-card/environment?env-name=${this.card.envName}`, {
                     value: this.value
                 })
                 .then(response => {
