@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-env', __DIR__.'/../dist/js/card.js');
-            Nova::style('nova-env', __DIR__.'/../dist/css/card.css');
+            Nova::script('nova-env-card', __DIR__.'/../dist/js/card.js');
+            Nova::style('nova-env-card', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -38,7 +38,7 @@ class CardServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/nova-env')
+                ->prefix('nova-vendor/nova-env-card')
                 ->group(__DIR__.'/../routes/api.php');
     }
 
